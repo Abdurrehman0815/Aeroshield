@@ -2,7 +2,7 @@ AQ-drone
 The AQ-drone project is an open-source air quality monitoring and prediction system utilizing drone technology to conduct real-time air quality assessments and implement pollution mitigation strategies.
 
 <img src="images/drone prototype.jpg" width="800">
-<br>Project Objectives
+<b></b>Project Objectives</b>
 Educational Impact: Develop a pedagogical curriculum that allows students to apply engineering and science skills to address real-world air quality issues.
 Community-Centric Data Collection: Aggregate data from a distributed network of air quality sensors to understand and enhance the environmental impact of pollution on communities, particularly vulnerable areas like East Los Angeles.
 About AQ-drone
