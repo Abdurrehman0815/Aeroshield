@@ -38,10 +38,10 @@ This project uses Random Forest to predict AQI value based on a cleaned dataset,
   
   ### Prediction Graphs:
   - **Ahmedabad 2030 AQI Prediction**  
-    ![Ahmedabad AQI](./Ahmedabad\ 2030\ AQI\ Prediction.jpg)
+    ![Ahmedabad AQI](./Ahmedabad.jpg)
   
   - **Delhi 2030 AQI Prediction**  
-    ![Delhi AQI](./Delhi\ 2030\ AQI\ Prediction.jpg)
+    ![Delhi AQI](./Delhi.jpg)
 
 
 
