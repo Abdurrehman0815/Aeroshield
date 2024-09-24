@@ -27,6 +27,3 @@ Air quality is a major concern in urban areas, especially near industrial sites,
 - **Balaji M**
 - **Abdur Rehman**
 
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
