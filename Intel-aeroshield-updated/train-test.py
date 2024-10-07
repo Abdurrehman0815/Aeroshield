@@ -5,6 +5,7 @@ import matplotlib.pyplot as plt  # For plotting graphs
 from sklearn.model_selection import train_test_split
 from sklearnex import patch_sklearn  # Intel oneDAL integration
 from sklearn.ensemble import RandomForestRegressor, RandomForestClassifier
+from sklearn.metrics import accuracy_score, mean_squared_error  # Import accuracy score and mean squared error
 
 # Load the training dataset (cleaned_dataset.csv)
 file_path_train = 'cleaned_dataset.csv'  # Update with the actual file path
@@ -69,7 +70,7 @@ intel_classifier_time = time.time() - start_time
 print(f"Intel Classifier Training Time: {intel_classifier_time:.4f} seconds")
 
 # Load and preprocess the input data (air_quality_with_aqi.csv)
-file_path_input = 'data_with_aqi.csv'  # Update with the actual file path
+file_path_input = 'air_quality_with_aqi.csv'  # Update with the actual file path
 print("Loading input data for prediction...")
 input_data = pd.read_csv(file_path_input)
 print("Input data loaded successfully!")
@@ -125,12 +126,18 @@ peak_bucket_hour, peak_bucket_day, peak_bucket_month, peak_bucket = peak_predict
 
 print(f"\nPeak Prediction: Hour {peak_aqi_hour}, Day {peak_aqi_day}, Month {peak_aqi_month} with Predicted AQI: {peak_aqi:.2f}, AQI Bucket: {peak_bucket}")
 
+# Calculate accuracy for Intel oneDAL models
+y_pred_class = rf_classifier_ex.predict(X_test_class)
+accuracy_intel_classifier = accuracy_score(y_test_class, y_pred_class) * 100  # Convert to percentage
+print(f"Accuracy for Intel Classifier: {accuracy_intel_classifier:.2f}%")  # Print accuracy as percentage
+
 # Summary of results (with four training times)
 print("\nSummary of Results:")
 print(f"Sklearn Regressor Training Time: {sklearn_regressor_time:.4f} seconds")
 print(f"Sklearn Classifier Training Time: {sklearn_classifier_time:.4f} seconds")
 print(f"Intel Regressor Training Time: {intel_regressor_time:.4f} seconds")
 print(f"Intel Classifier Training Time: {intel_classifier_time:.4f} seconds")
+print(f"Intel Classifier Accuracy: {accuracy_intel_classifier:.2f}%")  # Include accuracy in summary
 
 # Generate a bar chart for training times
 def plot_training_times():
