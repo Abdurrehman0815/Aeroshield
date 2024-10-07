@@ -27,4 +27,4 @@ This repository contains various scripts designed to preprocess, analyze, and pr
 
 Below is the graph showing the training performance of the models. 
 
-![Training Graph](Training%20Graph.jpg)
+![Training Graph](./Training_Graph.jpg)
